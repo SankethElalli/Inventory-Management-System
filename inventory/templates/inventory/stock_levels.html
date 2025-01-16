@@ -1,0 +1,31 @@
+{% extends 'inventory/base.html' %}
+
+{% block content %}
+<h1 class="text-3xl font-bold mb-6">Stock Levels</h1>
+<div class="bg-white shadow-md rounded-lg overflow-hidden">
+    <table class="min-w-full">
+        <thead class="bg-gray-100">
+            <tr>
+                <th class="py-3 px-6 text-left">Product</th>
+                <th class="py-3 px-6 text-left">Stock Quantity</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+            {% for product in products %}
+            <tr>
+                <td class="py-4 px-6">{{ product.name }}</td>
+                <td class="py-4 px-6">
+                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full 
+                        {% if product.stock_quantity > 50 %}bg-green-100 text-green-800
+                        {% elif product.stock_quantity > 20 %}bg-yellow-100 text-yellow-800
+                        {% else %}bg-red-100 text-red-800{% endif %}">
+                        {{ product.stock_quantity }}
+                    </span>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+

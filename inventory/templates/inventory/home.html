@@ -1,0 +1,24 @@
+{% extends 'inventory/base.html' %}
+
+{% block content %}
+<h1 class="text-3xl font-bold mb-8"></h1>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <a href="{% url 'add_product' %}" class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition duration-300">
+        <h2 class="text-xl font-semibold mb-2">Add Product</h2>
+        <p class="text-gray-600">Add a new product to your inventory</p>
+    </a>
+    <a href="{% url 'add_supplier' %}" class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition duration-300">
+        <h2 class="text-xl font-semibold mb-2">Add Supplier</h2>
+        <p class="text-gray-600">Add a new supplier to your system</p>
+    </a>
+    <a href="{% url 'add_stock_movement' %}" class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition duration-300">
+        <h2 class="text-xl font-semibold mb-2">Add Stock Movement</h2>
+        <p class="text-gray-600">Record incoming or outgoing stock</p>
+    </a>
+    <a href="{% url 'create_sale_order' %}" class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition duration-300">
+        <h2 class="text-xl font-semibold mb-2">Create Sale Order</h2>
+        <p class="text-gray-600">Create new sale order</p>
+    </a>
+</div>
+{% endblock %}
+
