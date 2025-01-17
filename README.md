@@ -37,11 +37,11 @@ This is a web-based Inventory Management System built with Django and MongoDB us
 ## Running the Project
 1. Run the migrations to set up the database:
    ```bash
-   python3 run.py makemigrations
-   python3 run.py migrate
+   python manage.py makemigrations
+   python manage.py migrate
    ```
 2. Start the development server:
    ```bash
-   python3 run.py runserver 8001
+   python manage.py runserver 8001
    ```
-3. Open your browser and navigate to `http://127.0.0.1:8001/` to access the application.
+3. Open your browser and navigate to `http://127.0.0.1/` to access the application.
